@@ -1,0 +1,6 @@
+[submodule "RPi_Server"]
+	path = RPi_Server
+	url = https://github.com/Bolsa-IPFN/RPi_Server.git
+[submodule "Main_Server"]
+	path = Main_Server
+	url = https://github.com/Bolsa-IPFN/Main_Server.git
