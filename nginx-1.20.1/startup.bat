@@ -1,0 +1,1 @@
+start /B cmd /K D:\Users\Pedro\Bolsa_IPFN_2021\nginx-1.20.1\nginx.exe -p D:\Users\Pedro\Bolsa_IPFN_2021\nginx-1.20.1
