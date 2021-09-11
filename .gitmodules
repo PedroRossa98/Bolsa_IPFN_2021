@@ -4,3 +4,6 @@
 [submodule "Main_Server"]
 	path = Main_Server
 	url = https://github.com/Bolsa-IPFN/Main_Server.git
+[submodule "Arduino"]
+	path = Arduino
+	url = https://github.com/Bolsa-IPFN/Arduino.git
