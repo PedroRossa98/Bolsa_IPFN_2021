@@ -8,11 +8,11 @@ import time
 
 interface = None
 
-HEADER = 64
+HEADER = 2048
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "!DISCONNECT"
 
-SERVER = "192.168.1.102"
+SERVER = "194.210.159.33"
 MY_IP = "192.168.1.83"
 SEGREDO = "estou bem"
 PORT = 5050
@@ -42,6 +42,8 @@ def send_exp_data():
             send(send_message)
             send_message = '{"msg_id":"7", "results":'+str(SAVE_DATA).replace('\'', '')+'}'
             send(send_message)
+            SAVE_DATA = []
+
             return #EXPERIMENT ENDED; END THREAD
 
 
@@ -80,13 +82,13 @@ def wait_for_messages():
 def send(msg):
     try:
         message = msg.encode(FORMAT)
-        msg_length = len(message)
+        msg_length = len(message) ## 52 
         send_length = str(msg_length).encode(FORMAT)
         send_length += b' ' * (HEADER - len(send_length))
-        client.sendall(send_length)
+        client.sendall(send_length) # 47
         #print (send_length)
         #print (message)
-        client.sendall(message)
+        client.sendall(message) # 
     except socket.error:
         raise socket.error
 
@@ -237,3 +239,7 @@ if __name__ == "__main__":
                 connected = False
             client.close()
             time.sleep(10)
+            
+
+# Monte_Carlo cfg R:1 Iteration:100
+# Monte_Carlo stp
