@@ -7,3 +7,6 @@
 [submodule "Arduino"]
 	path = Arduino
 	url = https://github.com/Bolsa-IPFN/Arduino.git
+[submodule "Final"]
+	path = Final
+	url = https://github.com/Bolsa-IPFN/Final.git
